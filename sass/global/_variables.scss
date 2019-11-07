@@ -1,0 +1,61 @@
+$roboto: 'Roboto', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$satisfy: 'Satisfy', cursive;
+$poiret: 'Poiret One', cursive;
+$lightbluesky: #dff7ff;
+$bluesky: #00bbff;
+$darkgrey: #222222;
+$grey: #555555;
+$lightgrey: #7b7b7b;
+$verylightgrey: #e6e6e6;
+$love: #f03172;
+$white: #ffffff;
+$black: #000000;
+$verydarkgrey: #111111;
+$younggrey: #fafafa;
+$borderblue: 2px solid #00bbff;
+$borderDarkGrey: 2px solid #222222;
+$base-margin: 20px;
+$blue: #345F90;
+$tab-height: 35px;
+$tab-border-radius: 35px;
+
+@mixin box-shadow($border) {
+    -ms-box-shadow: $border;
+    -webkit-box-shadow: $border;
+    -moz-box-shadow: $border;
+    -o-box-shadow: $border;
+    box-shadow: $border;
+}
+
+@mixin transform($transform) {
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin border-radius($border-radius) {
+    -ms-border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+
+@mixin transition($transition){
+    -ms-transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin background($background){
+    -ms-background: $background;
+    -webkit-background: $background;
+    -moz-background: $background;
+    -o-background: $background;
+    background: $background;
+}
