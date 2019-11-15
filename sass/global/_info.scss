@@ -224,9 +224,8 @@
                 width: 100%;
                 columns: 4 300px;
                 column-gap: .4rem;
-                list-style: none;
-                li{
-                    text-decoration: none;
+                section{
+                    position: relative;
                     overflow: hidden;
                     box-shadow: 0 5px 10px rgba(13, 103, 136, 0.2);
                     border-radius: 2px;
@@ -238,14 +237,67 @@
                     font-weight: 900;
                     font-size: 2rem;
                     @include transition(.5s all ease-in-out);
-                    &:hover{
-                        border: 1px solid rgba(0, 0, 0, 0.644);
+                    .art-hover{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: linear-gradient(to bottom, #00bfffbb, #32bbffbb, #0088ffbb);
+                        opacity: 0;
+                        cursor: pointer;
+                        &:hover{
+                            opacity: 1;
+                        }
+                        .icon-hover{
+                            width: 50%;
+                        }
                     }
-                    img{
+                    a img{
                         width: 100%;
                         @include transition(.5s all ease-in-out);
                         &:hover{
                             @include transform(scale(1.6) rotate(10deg));
+                        }
+                    }
+                }
+            }
+            .team{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h3{
+                    color: rgb(22, 157, 211);
+                    margin: 2em 0 0 0;
+                    font-family: $satisfy;
+                    font-size: 30px;
+                }
+                .row{
+                    margin: 1em;
+                    .list-user{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .user-name{
+                            margin: 1em;
+                            box-sizing: border-box;
+                            padding: 2em 1em;
+                            border: none;
+                            box-shadow: 0 5px 10px rgba(0, 134, 196, 0.199);
+                            img{
+                                width: 200px;
+                                border-radius: 2%;
+                            }
+                            h4{
+                                margin-top: 2em;
+                                text-align: center;
+                                font-family: $satisfy;
+                                font-size: 24px;
+                            }
                         }
                     }
                 }
@@ -256,11 +308,11 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                h4{
+                h3{
                     color: rgb(22, 157, 211);
                     margin: 2em 0 0 0;
                     font-family: $satisfy;
-                    font-size: 24px;
+                    font-size: 30px;
                 }
                 #list-contact{
                     display: flex;
@@ -299,8 +351,12 @@
         width: 100%;
         padding: 2em 0;
         font-size: 12px;
-        .nav-list{
+        a{
+            display: block;
             margin: 2em 0;
+        }
+        .nav-list{
+            margin: 0 0 1em 0;
             display: flex;
             list-style-type: none;
             justify-content: center;
@@ -326,6 +382,73 @@
             font-size: 22px;
         }
     }
+    .shooting-star-animation{
+        @include transform(rotate(150deg));
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+    @keyframes particleAnimation
+    {
+        from {
+    
+            left: -100px;
+        }
+        to {
+            left: calc( 100% + 100px );
+        }
+    }
+    .p{
+        @include border-radius(100%);
+        position: fixed;
+        left: 0px;
+        top: 50px;
+        animation-name: particleAnimation;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        &::before{
+            position:absolute;
+            display:block;
+            content:"";
+            width:100px;
+            right:1px;
+            top:0px;
+            height:5px;
+            border-radius: 50% 20% 20% 50%;
+            background: linear-gradient(to right, rgba(0, 50, 70, 0) 0%,rgba(0, 134, 196, 0.199) 100%); 
+        }
+    }
+    .p-1{
+        animation-duration: 10s;
+    }
+    .p-2{
+        animation-duration: 5s;
+        top: 20%;
+    }
+    .p-3{
+        animation-duration: 20s;
+        top: 45%;
+    }
+    .p-4{
+        animation-duration: 15s;
+        top: 60%;
+    }
+    .p-5{
+        animation-duration: 30s;
+        top: 70%;
+    }
+    .p-6{
+        animation-duration: 2s;
+        top: 90%;
+    }
+    .p-6{
+        animation-duration: 35s;
+        top: 100%;
+    }
+    
     #footer .nav-list, #footer p{
         margin-bottom: .5em;
         img{
