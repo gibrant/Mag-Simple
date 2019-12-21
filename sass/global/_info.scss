@@ -368,7 +368,12 @@
                 a{
                     color: $grey;
                     @include transition(.3s all ease-in);
-    
+                    .fb,.ig,.tweet{
+                        width: 30px;
+                        height: 30px;
+                        color: $darkgrey;
+                        margin: 0 5px;
+                    }
                 }
             }
         }

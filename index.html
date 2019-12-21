@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="shortcut icon" href="assets/logo/Wolf.png"/>
 
+    <!-- Canonical -->
+    <link rel="Canonical" href="https://ridwanisart.firebaseapp.com"/>
+
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Poppins|Satisfy&display=swap" rel="stylesheet"/> 
 
@@ -29,6 +32,21 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-151629275-1');
+    </script>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            "name": "Ridwani's Art",
+            "url": "https://ridwanisart.firebaseapp.com",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "{search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
     </script>
 
     <!-- JQuery & Popper -->
@@ -348,7 +366,7 @@
                             </section>
                             <section class="col-md-6 list-user">
                                 <section class="card user-name">
-                                    <img src="assets/team/Gibrant.png" alt="Robby Gibrant">
+                                    <img src="assets/team/Gibrant.jpg" alt="Robby Gibrant">
                                     <h4>Robby Gibrant</h4>
                                 </section>
                             </section>
@@ -385,10 +403,9 @@
                     Follow Us On
                 </h6>
                 <ul class="nav-list">
-                    <li><a href="#"><img src="assets/social-media/facebook.png" alt="facebook"></a></li>
-                    <li><a href="#"><img src="assets/social-media/twitter.png" alt="twitter"></a></li>
-                    <li><a href="#"><img src="assets/social-media/instagram.png" alt="instagram"></a></li>
-                    <li><a href="#"><img src="assets/social-media/google-plus.png" alt="google plus"></a></li>
+                    <li><a href="#"><i class="fb" data-feather="facebook"></i></a></li>
+                    <li><a href="#"><i class="ig" data-feather="instagram"></i></a></li>
+                    <li><a href="#"><i class="tweet" data-feather="twitter"></i></a></li>
                 </ul>
             </section>
             <p>

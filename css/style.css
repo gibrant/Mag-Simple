@@ -563,6 +563,12 @@ blockquote {
   -o-transition: 0.3s all ease-in;
   transition: 0.3s all ease-in;
 }
+#page-wrap #footer .nav-list li a .fb, #page-wrap #footer .nav-list li a .ig, #page-wrap #footer .nav-list li a .tweet {
+  width: 30px;
+  height: 30px;
+  color: #222222;
+  margin: 0 5px;
+}
 #page-wrap #footer a {
   color: #555555;
   -ms-transition: 0.3s all ease-in;
